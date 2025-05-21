@@ -14,7 +14,8 @@ declare global {
  * If valid, attaches decoded user payload to `req.user`.
 */
 export const authenticateJWT = (req: Request, res: Response, next: NextFunction) => {
-    const token = req.cookies?.accesToken;
+    console.log(req.cookies?.accessToken, 'cookies');
+    const token = req.cookies?.accessToken;
 
     if (!token) {
         res.status(401).json({ message: 'Unauthorized: Access token not provided.' });

@@ -1,9 +1,6 @@
 {
     "extends": ["//"],
     "tasks": {
-        "build" : {
-            "outputs": ["dist/**/*"]
-        },
         "db:generate": {
             "outputs": ["generated/**/*"],
             "inputs": ["prisma/schema.prisma", ".env*"]
